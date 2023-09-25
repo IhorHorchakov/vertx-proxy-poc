@@ -1,0 +1,1 @@
+POC shows 2 proxy services that communicate over Vertx event bus. Proxy1 service sends a list of ids to Proxy2 service over event bus. Proxy2 service loggs a list of received ids. 

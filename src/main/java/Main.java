@@ -1,9 +1,9 @@
 import io.vertx.core.Vertx;
-import org.folio.Verticle;
+import org.folio.VertxVerticle;
 
 public class Main {
     public static void main(String[] args) {
         Vertx vertx = Vertx.vertx();
-        vertx.deployVerticle(new Verticle());
+        vertx.deployVerticle(new VertxVerticle());
     }
 }

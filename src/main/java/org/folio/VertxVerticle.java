@@ -1,12 +1,14 @@
 package org.folio;
 
-import io.vertx.core.*;
+import io.vertx.core.AbstractVerticle;
+import io.vertx.core.Context;
+import io.vertx.core.Vertx;
 import io.vertx.serviceproxy.ServiceBinder;
 import org.folio.services.proxy1.Proxy1;
 import org.folio.services.proxy2.Proxy2;
 
 
-public class Verticle extends AbstractVerticle {
+public class VertxVerticle extends AbstractVerticle {
     private Proxy1 proxy1;
     @Override
     public void init(Vertx vertx, Context context) {
@@ -22,7 +24,7 @@ public class Verticle extends AbstractVerticle {
         this.proxy1 = proxy1;
     }
 
-    public void start() throws Exception {
+    public void start() {
         proxy1.sendIds();
     }
 }
